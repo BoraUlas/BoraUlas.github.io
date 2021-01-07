@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hakkımda</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="img/favicon.ico" rel="icon">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet"> 
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <script 
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+        </script>
+    </head>
+
+    <body>
+
+        <div class="nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">Menü</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <div class="logo">
+                                <img src="img/logo.png" alt="Logo">
+                            </div>
+                            <a href="index.html" class="nav-item nav-link">Anasayfa</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ekstra</a>
+                                <div class="dropdown-menu">
+                                    <a href="alt-menü-1.html" class="dropdown-item" target="_blank">Witcher</a>
+                                    <a href="alt-menü-2.html" class="dropdown-item" target="_blank">Sony</a>
+                                    <a href="alt-menü-3.html" class="dropdown-item" target="_blank">E.T</a>
+                                </div>
+                            </div>
+                            <a href="single-page.html" class="nav-item nav-link" target="_blank">Hakkımda</a>
+                            <a href="contact.html" class="nav-item nav-link ">İletişim</a>
+                        </div>
+                        <div class="social ml-auto">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://tr.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+     
+        
+        <div class="contact">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <div class="contact-form">
+                            <html>
+                            <head>
+                            <title>file</title>
+                            </head>
+                            <script 
+                            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+                            </script>
+                            <body id="target">
+                            <p> Hakkımda </p>
+                            <div>
+                            <textarea id="content" rows="10" cols="70">
+                            2000 yılında Kocaeli’de doğdu. İlk, orta ve lise öğrenimini Kocaeli’de tamamladı. 2018 yılında girdiği Kocaeli Üniversitesi Teknoloji Fakültesi Bilişim Sistemleri Mühendisliği Bölümü’nde eğitimine devam etmekte. TRTEK firmasında, Premierturk firmasında kısa süreli çalıştı şuan Gölcük Belediyesi Bilgi İşlem müdürlüğünde çalışıyor. 
+                            </textarea>
+                            </div>
+                            <div id="editor"></div>
+                            <button  id="cmd">PDF olarak kaydet</button>
+                            <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js">
+                            </script>
+                             <script>
+                                 var doc= new jsPDF();
+                                 $('#cmd').click(function () {
+                                 doc.text($('#content').val(), 10, 10);
+                                 doc.save('Reason.pdf'); 
+                                 });
+                             </script>
+                            </body>
+                          </html>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+        
+  
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">İletişim</h3>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>Kocaeli Gölcük Belediyesi Bilgi İşlem Müdürlüğü</p>
+                                <p><i class="fa fa-envelope"></i>ulasbora00@hotmail.com</p>
+                                <p><i class="fa fa-phone"></i>+90-530-305-30-77</p>
+                                <div class="social">
+                                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://tr.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Hakkımda</h3>
+                            <div class="newsletter">
+                                <p>
+                                    Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliğinde öğrenci.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; <a href="">Bora Ulaş Bayar</a>. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
