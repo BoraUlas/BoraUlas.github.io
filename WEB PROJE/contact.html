@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src= 
+        "https://smtpjs.com/v3/smtp.js"> 
+       </script> 
+       <script src="main.js"></script>
+        <title>İletişim</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <link href="img/favicon.ico" rel="icon">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet"> 
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">Menü</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <div class="logo">
+                                <img src="img/logo.png" alt="Logo">
+                            </div>
+                            <a href="index.html" class="nav-item nav-link">Anasayfa</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ekstra</a>
+                                <div class="dropdown-menu">
+                                    <a href="alt-menü-1.html" class="dropdown-item" target="_blank">Witcher</a>
+                                    <a href="alt-menü-2.html" class="dropdown-item" target="_blank">Sony</a>
+                                    <a href="alt-menü-3.html" class="dropdown-item" target="_blank">E.T</a>
+                                </div>
+                            </div>
+                            <a href="single-page.html" class="nav-item nav-link" target="_blank">Hakkımda</a>
+                            <a href="contact.html" class="nav-item nav-link">İletişim</a>
+                        </div>
+                        <div class="social ml-auto">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://tr.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <div class="contact-form">
+                            <form id="f1" onsubmit="sendMail(this)" enctype="text/plain">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" value="Ad" id="ad" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" value="Soyad" id="soyad" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="date" class="form-control" value="DD/MM/YYYY" id="tarih" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="tel" class="form-control" placeholder="+XX-XXX-XX-XX" id="tel" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="email" class="form-control" placeholder="E-mail" id="mail"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Konu" id="baslık"/>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="5" placeholder="Mesaj" id="mesaj"></textarea>
+                                </div>
+                                <div>   
+                                    <input class="btn" type="submit" value="Mail Yolla"/>                                
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- https://stackoverflow.com/questions/21028939/mailto-using-javascript
+                    mail kısmında bu siteden yardım aldım. -->
+                    <script>
+                        function sendMail(f1)
+                        {
+                            var yourMessage = document.getElementById("ad").value + "," + document.getElementById("soyad").value + "," 
+                            + document.getElementById("tarih").value+ "," + document.getElementById("tel").value+ "," 
+                            + document.getElementById("mail").value + "," + document.getElementById("mesaj").value 
+                            var subject = document.getElementById("baslık").value
+                            document.location.href = "mailto:ulasbora00@hotmail.com?subject="
+                            + encodeURIComponent(subject)
+                            + "&body=" + encodeURIComponent(yourMessage);
+                        }
+                    </script>
+                    <div class="col-md-4">
+                        <div class="contact-info">
+                            <h3>İletişim</h3>
+                            <p>
+                                Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliğinde öğrenci.
+                            </p>
+                            <p><i class="fa fa-map-marker"></i>Kocaeli Gölcük Belediyesi Bilgi İşlem Müdürlüğü</p>
+                                <p><i class="fa fa-envelope"></i>ulasbora00@hotmail.com</p>
+                                <p><i class="fa fa-phone"></i>+90-530-305-30-77</p>
+                            <div class="social">
+                                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://tr.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">İletişim</h3>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>Kocaeli Gölcük</p>
+                                <p><i class="fa fa-envelope"></i>ulasbora00@hotmail.com</p>
+                                <p><i class="fa fa-phone"></i>+90-530-305-30-77</p>
+                                <div class="social">
+                                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://tr.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Hakkımda</h3>
+                            <div class="newsletter">
+                                <p>
+                                    Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliğinde öğrenci.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; <a href="">Bora Ulaş Bayar</a>. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
